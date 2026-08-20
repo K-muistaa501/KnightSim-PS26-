@@ -1,7 +1,7 @@
 {
     "first_time": false,
     "opening_seen": true,
-    "name": "",
+    "name": "K_muistaa",
     "class": "Soldier",
     "level": 1,
     "EXP": 0,
@@ -9,5 +9,6 @@
     "AK": 15,
     "SP": 10,
     "DF": 10,
-    "EP": 10
+    "EP": 10,
+    "geargrub_defeated": true
 }

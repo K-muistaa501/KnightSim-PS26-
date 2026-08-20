@@ -1,4 +1,3 @@
-```python
 # -*- coding: utf-8 -*-
 import pygame
 import json
@@ -1592,4 +1591,4 @@ while running:
 # CLEANUP
 
 pygame.quit()
-```
+
