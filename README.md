@@ -30,6 +30,7 @@ The game is currently a **work in progress**, with the main focus being explorat
 * **NumPy**
 * **JSON** for save data
 * **GitHub** for version control
+* **ChatGPT** for helping to generate and debug code (I can't code and this is my first time doing so)
 
 ## 🚀 Running the Game
 
