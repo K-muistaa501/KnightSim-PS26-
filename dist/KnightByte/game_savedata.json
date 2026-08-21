@@ -1,0 +1,14 @@
+{
+    "first_time": true,
+    "opening_seen": false,
+    "name": "",
+    "class": "",
+    "level": 1,
+    "EXP": 0,
+    "HP": 100,
+    "AK": 15,
+    "SP": 10,
+    "DF": 10,
+    "EP": 10,
+    "geargrub_defeated": false
+}

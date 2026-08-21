@@ -4,10 +4,15 @@ import json
 import os
 import numpy as np
 import random
-
+import sys
+from pathlib import Path
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).parent
 # SAVE DATA
 
-SAVE_FILE = "game_savedata.json"
+SAVE_FILE = str(BASE_DIR / "game_savedata.json")
 
 DEFAULT_DATA = {
     "first_time": True,
@@ -101,18 +106,31 @@ clock = pygame.time.Clock()
 
 # MUSIC / SOUND
 
-main_menu_music = "Sounds/KnightByte_OST_The_Quest_Main_menu.ogg"
-settings_music = (
-    "Sounds/dejcomin-deep-ambient-electronic-theme-music-"
+SOUNDS_DIR = BASE_DIR / "Sounds"
+
+main_menu_music = str(
+    SOUNDS_DIR / "KnightByte_OST_The_Quest_Main_menu.ogg"
+)
+
+settings_music = str(
+    SOUNDS_DIR /
+    "dejcomin-deep-ambient-electronic-theme-music-"
     "loading-screen-menu-dejcoart-429846.ogg"
 )
-credits_music = "Sounds/pynchon.ogg"
+
+credits_music = str(SOUNDS_DIR / "pynchon.ogg")
 
 menu_select_sound = pygame.mixer.Sound(
-    "Sounds/freesound_community-menu-selection-102220.ogg"
+    str(SOUNDS_DIR / "freesound_community-menu-selection-102220.ogg")
 )
-pause_sound = pygame.mixer.Sound("Sounds/Pause_sound_game.ogg")
-start_sound = pygame.mixer.Sound("Sounds/Start_sound_game.ogg")
+
+pause_sound = pygame.mixer.Sound(
+    str(SOUNDS_DIR / "Pause_sound_game.ogg")
+)
+
+start_sound = pygame.mixer.Sound(
+    str(SOUNDS_DIR / "Start_sound_game.ogg")
+)
 
 muted = False
 current_music = None
@@ -1075,7 +1093,7 @@ while running:
 
     elif screen_stage == "3":
         village = pygame.image.load(
-            "images/Old Village 2.jpg"
+        str(BASE_DIR / "images" / "Old Village 2.jpg")
         ).convert()
 
         village = pygame.transform.scale(
